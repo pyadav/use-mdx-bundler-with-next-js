@@ -1,13 +1,13 @@
-import type { NextApiRequest, NextApiResponse } from "next";
+// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
+import type { NextApiRequest, NextApiResponse } from 'next'
 
-type Profile = {
-  whoami: string;
-  website: string;
-};
+type Data = {
+  name: string
+}
 
-export default (req: NextApiRequest, res: NextApiResponse<Profile>) => {
-  res.status(200).json({
-    whoami: "praveen yadav",
-    website: "https://www.iamyadav.com",
-  });
-};
+export default function handler(
+  req: NextApiRequest,
+  res: NextApiResponse<Data>
+) {
+  res.status(200).json({ name: 'John Doe' })
+}

@@ -1,16 +1,24 @@
-.container {
-  min-height: 100vh;
-  padding: 4rem 0.5rem;
+.main {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  height: 100vh;
+  padding: 6rem;
+  min-height: 100vh;
 }
 
+.description {
+  font-size: 0.85rem;
+  max-width: var(--max-width);
+  width: 100%;
+  z-index: 2;
+  font-family: var(--font-mono);
+}
 
-@media (max-width: 600px) {
-  .grid {
-    width: 100%;
-    flex-direction: column;
-  }
+.description a {
+  display: flex;
+  text-decoration: none;
+  gap: 0.5rem;
+}
+
+.description li {
+  list-style: circle;
 }
